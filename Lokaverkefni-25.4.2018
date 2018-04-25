@@ -1,3 +1,33 @@
 DROP DATABASE IF EXISTS kennitala_Lokaverkefni;
 CREATE DATABASE kennitala_Lokaverkefni;
 USE kennitala_Lokaverkefni;
+
+CREATE TABLE flytjandi
+(	ID char(10) PRIMARY KEY,
+	artist_name varchar(50),
+    born varchar(9),
+    died varchar(9),
+    biography varchar(100)
+);
+
+CREATE TABLE lagalisti
+(	ID char(10) PRIMARY KEY,
+	song_name varchar(50),
+    length varchar(5),
+    text_ varchar(2000),
+    release_date varchar(9)
+);
+
+CREATE TABLE tegund
+(	ID char(10) PRIMARY KEY,
+	song_genre varchar(30),
+    artist_name varchar(50)
+);
+
+
+CREATE TABLE utgefandi
+(	ID char(10) PRIMARY KEY,
+	label_name varchar(50),
+    copyright varchar(25),
+    located varchar(90)
+);
