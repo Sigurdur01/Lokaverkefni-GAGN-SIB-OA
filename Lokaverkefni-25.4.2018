@@ -1,1 +1,3 @@
-
+DROP DATABASE IF EXISTS kennitala_Lokaverkefni;
+CREATE DATABASE kennitala_Lokaverkefni;
+USE kennitala_Lokaverkefni;
