@@ -36,6 +36,31 @@ CREATE TABLE utgefandi
     FOREIGN KEY (label_name) REFERENCES lagalisti(song_name)
 );
 
+INSERT INTO kennitala_Lokaverkefni.flytjandi(ID, artist_name, born, died, biography)
+VALUES('0123456789','Post Malone','4.júlí 1995','Not Dead','https://en.wikipedia.org/wiki/Post_Malone'),
+      ('9874563210','Elton John','25.mars 1947','Not Dead','https://is.wikipedia.org/wiki/Elton_John'),
+      ('9874563212','The Weeknd','16.Febrúar','Not dead','https://en.wikipedia.org/wiki/The_Weeknd'),
+      ('9874563219','Foo Fighters','27.mars 1995','Not Dead','https://is.wikipedia.org/wiki/Foo_Fighters'),
+      ('9874563216','Sabaton','??? 1999','Not Dead','https://en.wikipedia.org/wiki/Sabaton_(band)');
+
+INSERT INTO kennitala_Lokaverkefni.lagalisti(ID, artist_name, song_name, length, text_, release_date)
+VALUES('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),
+      ('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''), 
+      ('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),
+      ('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),
+      ('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','','');
+
+INSERT INTO kennitala_Lokaverkefni.tegund(ID, song_genre, artist_name)
+VALUES('','',''),
+      ('','',''),
+      ('','',''),
+      ('','',''),
+      ('','','');
+
+INSERT INTO kennitala_Lokaverkefni.uutgefandui(ID, lable_name, copyright, located)
+VALUES('','','',''),
+      ('','','','')
+
 /*-------------------------------------------------------------*/
 
 CREATE TABLE askrifandi
