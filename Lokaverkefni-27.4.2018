@@ -5,17 +5,17 @@ USE kennitala_Lokaverkefni;
 CREATE TABLE flytjandi
 (	ID char(10) PRIMARY KEY NOT NULL,
 	artist_name varchar(50),
-    born varchar(9),
-    died varchar(9),
-    biography varchar(100)
+    born DATE,
+    died DATE,
+    biography TEXT
 );
 
 CREATE TABLE lagalisti
 (	ID char(10) PRIMARY KEY NOT NULL,
 	song_name varchar(50),
     length varchar(5),
-    text_ varchar(2000),
-    release_date varchar(9)
+    text TEXT,
+    release_date DATE
 );
 
 CREATE TABLE tegund
@@ -45,7 +45,7 @@ address VARCHAR(30) NOT NULL
 CREATE TABLE lagaval
 (
 subscriber VARCHAR(30),
-performer VARCHAR(30),
+band VARCHAR(30),
 song VARCHAR(50),
 date VARCHAR(30)
 );
@@ -53,18 +53,18 @@ date VARCHAR(30)
 CREATE TABLE tonleikar
 (
 ID INT PRIMARY KEY AUTO_INCREMENT,
-performers_con
-location
-date
-tickets
-subscribers
-schedule
+band_con VARCHAR(30),
+location VARCHAR(50),
+date DATE,
+tickets INT,
+subscribers VARCHAR(30),
+schedule TEXT
 );
 
 CREATE TABLE midasala
 (
-ticket_amount
-location
-performer
-date
+ticket_amount INT,
+location VARCHAR(50),
+band VARCHAR(30),
+date DATE
 );
