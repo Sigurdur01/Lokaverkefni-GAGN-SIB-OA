@@ -3,17 +3,17 @@ CREATE DATABASE kennitala_Lokaverkefni;
 USE kennitala_Lokaverkefni;
 
 CREATE TABLE flytjandi
-(	ID INT PRIMARY KEY NOT NULL,
-	artist_name varchar(50),
+(    ID INT(2) PRIMARY KEY NOT NULL,
+    artist_name varchar(50),
     born VARCHAR(30),
     died VARCHAR(30),
     biography TEXT
 );
 
 CREATE TABLE lagalisti
-(	ID INT PRIMARY KEY NOT NULL,
-	artist_name VARCHAR(30),
-	song_name varchar(50),
+(    ID INT(2) PRIMARY KEY NOT NULL,
+    artist_name VARCHAR(30),
+    song_name varchar(50),
     length DECIMAL(5,2),
     text TEXT,
     release_date VARCHAR(30),
@@ -21,16 +21,16 @@ CREATE TABLE lagalisti
 );
 
 CREATE TABLE tegund
-(	ID char(10) PRIMARY KEY NOT NULL,
-	song_genre varchar(30),
+(   tegund_ID INT(2) PRIMARY KEY NOT NULL,
+    song_genre varchar(30),
     artist_name varchar(50),
     FOREIGN KEY (artist_name) REFERENCES lagalisti(artist_name)
 );
 
 
 CREATE TABLE utgefandi
-(	ID char(10) PRIMARY KEY NOT NULL,
-	label_name varchar(50),
+(   ID INT(3) PRIMARY KEY NOT NULL,
+    label_name varchar(50),
     copyright varchar(25),
     located varchar(90),
     FOREIGN KEY (label_name) REFERENCES lagalisti(song_name)
@@ -44,18 +44,18 @@ VALUES(10,'Post Malone','4.júlí 1995','Not Dead','https://en.wikipedia.org/wik
       (50,'Sabaton','??? 1999','Not Dead','https://en.wikipedia.org/wiki/Sabaton_(band)');
 
 INSERT INTO kennitala_Lokaverkefni.lagalisti(ID, artist_name, song_name, length, text, release_date)
-VALUES(10,'','','','',''),(10,'','','','',''),(10,'','','','',''),
-      (20,'','','','',''),(20,'','','','',''),(20,'','','','',''),
-      (30,'','','','',''),(30,'','','','',''),(30,'','','','',''),
+VALUES(10,'Post Malone','rockstar',3.3,'I´ve been fucking hoes and pooping pillies man i feel like a rockstar All my brothers got that gas and they always be smokin´ like a Rasta','15.Sept 2017'),(10,'Post Malone','Congratulations',3.4,'My momma called, seen you on TV, son said shit done changed ever since we was on, i dreamed at all ever since i was young','4.Nov 2016'),(10,'Post Malone','White Iverson',4,1,'Saucin, saucin, I´m saucin´ on you i´m swaggin, i´m swaggin, i´m swaggin, oh-ohh I´m ballin, I´m ballin Iverson on you','14.Ágúst 2015'),
+      (20,'Logic','BoomTrap Protocol','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''), 
+      (30,'The Weeknd','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),
       (40,'Foo Fighters','These Days',5.3,'One of these days the ground will drop out from beneath your feet One of these days your heart will stop and play its final beat One of these days the clocks will stop and time won't mean a thing One of these days their bombs will drop and silence everything',''),(40,'Foo Fighters','Learn To Fly',4.5,'Run and tell all of the angels This could take all night Think I need a devil to help me get things right',''),(40,'Foo Fighters','Everlong',4.8,'Hello I've waited here for you Everlong Tonight I throw myself into And out of the red Out of her head she sang',''),
       (50,'Sabaton','Ghost Division',3.9,'Fast as the wind, the invasion has begun Shaking the ground with the force of thousand guns First in the line of fire, first into hostile land Tanks leading the way, leading the way',''),(50,'Sabaton','Resist And Bite',3.3,'War is coming swiftly The border is closing in We’re a company of soldiers We’re 40 rifles strong',''),(50,'Sabaton','Hearts Of Iron',4.3,'See the Reich in flames Try to save Berlin in vain It’s a road through death and pain On the other shore, there’s the end of the war','');
 
 INSERT INTO kennitala_Lokaverkefni.tegund(ID, song_genre, artist_name)
-VALUES('','',''),
-      ('','',''),
-      ('','',''),
-      ('','',''),
-      ('','','');
+VALUES(75,'Pop','Post Malone'),
+      (80,'Pop','Logic'),
+      (85,'Pop','The Weeknd'),
+      (90,'Rock','Foo Fighters'),
+      (95,'Metal','Sabaton');
 
 INSERT INTO kennitala_Lokaverkefni.utgefandi(ID, label_name, copyright, located)
 VALUES('','','',''),
