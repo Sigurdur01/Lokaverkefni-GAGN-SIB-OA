@@ -3,7 +3,7 @@ CREATE DATABASE kennitala_Lokaverkefni;
 USE kennitala_Lokaverkefni;
 
 CREATE TABLE flytjandi
-(	ID char(10) PRIMARY KEY NOT NULL,
+(	ID INT PRIMARY KEY NOT NULL,
 	artist_name varchar(50),
     born VARCHAR(30),
     died VARCHAR(30),
@@ -37,18 +37,18 @@ CREATE TABLE utgefandi
 );
 
 INSERT INTO kennitala_Lokaverkefni.flytjandi(ID, artist_name, born, died, biography)
-VALUES('0123456789','Post Malone','4.júlí 1995','Not Dead','https://en.wikipedia.org/wiki/Post_Malone'),
-      ('9874563210','Elton John','25.mars 1947','Not Dead','https://is.wikipedia.org/wiki/Elton_John'),
-      ('9874563212','The Weeknd','16.Febrúar','Not dead','https://en.wikipedia.org/wiki/The_Weeknd'),
-      ('9874563219','Foo Fighters','27.mars 1995','Not Dead','https://is.wikipedia.org/wiki/Foo_Fighters'),
-      ('9874563216','Sabaton','??? 1999','Not Dead','https://en.wikipedia.org/wiki/Sabaton_(band)');
+VALUES(10,'Post Malone','4.júlí 1995','Not Dead','https://en.wikipedia.org/wiki/Post_Malone'),
+      (20,'Elton John','25.mars 1947','Not Dead','https://is.wikipedia.org/wiki/Elton_John'),
+      (30,'The Weeknd','16.Febrúar','Not dead','https://en.wikipedia.org/wiki/The_Weeknd'),
+      (40,'Foo Fighters','27.mars 1995','Not Dead','https://is.wikipedia.org/wiki/Foo_Fighters'),
+      (50,'Sabaton','??? 1999','Not Dead','https://en.wikipedia.org/wiki/Sabaton_(band)');
 
 INSERT INTO kennitala_Lokaverkefni.lagalisti(ID, artist_name, song_name, length, text, release_date)
-VALUES('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),
-      ('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''), 
-      ('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),
-      ('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),('','','','','',''),
-      (50,'Sabaton','Screaming Eagles',4.5,'Crack of the lightning splitting the ground Thunder is sounding, artillery pounding Wrath of the Nazi’s cast on Bastogne Facing their forces alone',''),(51,'Sabaton','Ghost Division',3.9,'Fast as the wind, the invasion has begun Shaking the ground with the force of thousand guns First in the line of fire, first into hostile land Tanks leading the way, leading the way',''),(52,'Sabaton','Night Witches',3,'From the depths of hell in silence Cast their spells, explosive violence Russian night time flight perfected Flawless vision, undetected',''),(53,'Sabaton','Primo Victoria',4,'Through the gates of hell As we make our way to heaven Through the Nazi lines Primo victoria',''),(54,'Sabaton','The Lost Battalion',3.5,'Far from their land, as they made their stand They stood strong and the legend still lives on',''),(55,'Sabaton','Resist And Bite',3.3,'War is coming swiftly The border is closing in We’re a company of soldiers We’re 40 rifles strong',''),(56,'Sabaton','The Last Stand',3.6,'In the heart of Holy See In the home of Christianity The Seat of power is in danger',''),(57,'Sabaton','To Hell & Back',3,'A short man from Texas A man of the wild Thrown into combat Where bodies lie piled',''),(58,'Sabaton','Blood Of Bannockburn',3.8,'Now that our time has come to Fight Scotland must unite We´ll make a stand on Stirling ground To put a challenge to the crown',''),(59,'Sabaton','Hearts Of Iron',4.3,'See the Reich in flames Try to save Berlin in vain It’s a road through death and pain On the other shore, there’s the end of the war','');
+VALUES(10,'','','','',''),(10,'','','','',''),(10,'','','','',''),
+      (20,'','','','',''),(20,'','','','',''),(20,'','','','',''),
+      (30,'','','','',''),(30,'','','','',''),(30,'','','','',''),
+      (40,'Foo Fighters','These Days',5.3,'One of these days the ground will drop out from beneath your feet One of these days your heart will stop and play its final beat One of these days the clocks will stop and time won't mean a thing One of these days their bombs will drop and silence everything',''),(40,'Foo Fighters','Learn To Fly',4.5,'Run and tell all of the angels This could take all night Think I need a devil to help me get things right',''),(40,'Foo Fighters','Everlong',4.8,'Hello I've waited here for you Everlong Tonight I throw myself into And out of the red Out of her head she sang',''),
+      (50,'Sabaton','Ghost Division',3.9,'Fast as the wind, the invasion has begun Shaking the ground with the force of thousand guns First in the line of fire, first into hostile land Tanks leading the way, leading the way',''),(50,'Sabaton','Resist And Bite',3.3,'War is coming swiftly The border is closing in We’re a company of soldiers We’re 40 rifles strong',''),(50,'Sabaton','Hearts Of Iron',4.3,'See the Reich in flames Try to save Berlin in vain It’s a road through death and pain On the other shore, there’s the end of the war','');
 
 INSERT INTO kennitala_Lokaverkefni.tegund(ID, song_genre, artist_name)
 VALUES('','',''),
@@ -57,7 +57,7 @@ VALUES('','',''),
       ('','',''),
       ('','','');
 
-INSERT INTO kennitala_Lokaverkefni.uutgefandui(ID, lable_name, copyright, located)
+INSERT INTO kennitala_Lokaverkefni.utgefandi(ID, label_name, copyright, located)
 VALUES('','','',''),
       ('','','','')
 
@@ -81,14 +81,6 @@ FOREIGN KEY (song_name) REFERENCES lagalisti(song_name),
 FOREIGN KEY (subscriber) REFERENCES askrifandi(name)
 );
 
-CREATE TABLE midasala
-(
-ticket_amount INT,
-location VARCHAR(50),
-band VARCHAR(50),
-date VARCHAR(30),
-FOREIGN KEY (band) REFERENCES flytjandi(artist_name)
-);
 
 INSERT INTO askrifandi(ID, name, email, address)
 VALUES
@@ -96,4 +88,19 @@ VALUES
 ('7349394856','Gunnar Gunnarsson','gunngunn@yahoo.com','Gunnarsgata 56'),
 ('7867457246','Páll Guðmundsson','pallgud@gmail.com','Pálsgata 467'),
 ('4645778945','Ari Jónsson','arijonsson1337@hotmail.com','Aragata 43'),
-('1211784573','Pétur Gunnarsson','peturgunnars@gmail.com','Pétursgata 1');
+('1211784573','Pétur Gunnarsson','peturgunnars@gmail.com','Pétursgata 1'),
+('3465464565','Arnór Pétursson','arnorpet@gmail.com','Arnórsstræti 72'),
+('6586473457','Kristófer Sigurgeirsson','kristosig@gmail.com','Kristóferssund 5');
+
+
+
+INSERT INTO lagaval(subscriber,band,song_name,date)
+VALUES
+('Jón Jónsson','Sabaton','Ghost Division',''),('Jón Jónsson','Foo Fighters','Learn To Fly',''),('Jón Jónsson','Sabaton','Resist And Bite',''),('Jón Jónsson','Sabaton','Hearts Of Iron',''),('Jón Jónsson','Foo Fighters','These Days',''),
+('','','',''),('','','',''),('','','',''),('','','',''),('','','',''),
+('','','',''),('','','',''),('','','',''),('','','',''),('','','',''),
+('','','',''),('','','',''),('','','',''),('','','',''),('','','',''),
+('','','',''),('','','',''),('','','',''),('','','',''),('','','',''),
+('','','',''),('','','',''),('','','',''),('','','',''),('','','',''),
+('','','',''),('','','',''),('','','',''),('','','',''),('','','',''),
+('','','',''),('','','',''),('','','',''),('','','',''),('','','','');
