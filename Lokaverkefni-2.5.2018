@@ -38,7 +38,7 @@ CREATE TABLE utgefandi
 
 INSERT INTO kennitala_Lokaverkefni.flytjandi(ID, artist_name, born, died, biography)
 VALUES(10,'Post Malone','4.júlí 1995','Not Dead','https://en.wikipedia.org/wiki/Post_Malone'),
-      (20,'Elton John','25.mars 1947','Not Dead','https://is.wikipedia.org/wiki/Elton_John'),
+      (20,'Logic','22.janúar','Not Dead','https://en.wikipedia.org/wiki/Logic_(musician)'),
       (30,'The Weeknd','16.Febrúar','Not dead','https://en.wikipedia.org/wiki/The_Weeknd'),
       (40,'Foo Fighters','27.mars 1995','Not Dead','https://is.wikipedia.org/wiki/Foo_Fighters'),
       (50,'Sabaton','??? 1999','Not Dead','https://en.wikipedia.org/wiki/Sabaton_(band)');
