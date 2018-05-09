@@ -100,9 +100,9 @@ VALUES
 INSERT INTO lagaval(subscriber,band,song_name,date)
 VALUES
 ('Jón Jónsson','Sabaton','Ghost Division',''),('Jón Jónsson','Foo Fighters','Learn To Fly',''),('Jón Jónsson','Sabaton','Resist And Bite',''),('Jón Jónsson','Sabaton','Hearts Of Iron',''),('Jón Jónsson','Foo Fighters','These Days',''),
-('Gunnar Gunnarsson','','','9.5.2018'),('Gunnar Gunnarsson','','','9.5.2018'),('Gunnar Gunnarsson','','','9.5.2018'),('Gunnar Gunnarsson','','','9.5.2018'),('Gunnar Gunnarsson','','','9.5.2018'),
-('Páll Guðmundsson','','','9.5.2018'),('Páll Guðmundsson','','','9.5.2018'),('Páll Guðmundsson','','','9.5.2018'),('Páll Guðmundsson','','','9.5.2018'),('Páll Guðmundsson','','','9.5.2018'),
-('Ari Jónsson','','','9.5.2018'),('Ari Jónsson','','','9.5.2018'),('Ari Jónsson','','','9.5.2018'),('Ari Jónsson','','','9.5.2018'),('Ari Jónsson','','','9.5.2018'),
-('Pétur Gunnarsson','','','9.5.2018'),('Pétur Gunnarsson','','','9.5.2018'),('Pétur Gunnarsson','','','9.5.2018'),('Pétur Gunnarsson','','','9.5.2018'),('Pétur Gunnarsson','','','9.5.2018'),
+('Gunnar Gunnarsson','Logic','BoomTrap Protocol','9.5.2018'),('Gunnar Gunnarsson','The Weeknd','Call Out My Name','9.5.2018'),('Gunnar Gunnarsson','Sabaton','Ghost Division','9.5.2018'),('Gunnar Gunnarsson','Post Malone','rockstar','9.5.2018'),('Gunnar Gunnarsson','Foo Fighters','These Days','9.5.2018'),
+('Páll Guðmundsson','Foo Fighters','Everlong','9.5.2018'),('Páll Guðmundsson','The Weeknd','Pray For Me','9.5.2018'),('Páll Guðmundsson','Logic','BoomTrap Protocol','9.5.2018'),('Páll Guðmundsson','Logic','Everyday','9.5.2018'),('Páll Guðmundsson','Logic','1-800-273-8255','9.5.2018'),
+('Ari Jónsson','Sabaton','Hearts of Iron','9.5.2018'),('Ari Jónsson','Post Malone','White Iverson','9.5.2018'),('Ari Jónsson','Post Malone','Congratulations','9.5.2018'),('Ari Jónsson','The Weeknd','Sidewalks','9.5.2018'),('Ari Jónsson','Foo Fighters','Learn To Fly','9.5.2018'),
+('Pétur Gunnarsson','Foo Figters','Learn To Fly','9.5.2018'),('Pétur Gunnarsson','Sabaton','Resist And Bite','9.5.2018'),('Pétur Gunnarsson','Logic','Everyday','9.5.2018'),('Pétur Gunnarsson','Logic','1-800-273-8255','9.5.2018'),('Pétur Gunnarsson','Post Malone','White Iverson','9.5.2018'),
 ('Arnór Pétursson','','','9.5.2018'),('Arnór Pétursson','','','9.5.2018'),('Arnór Pétursson','','','9.5.2018'),('Arnór Pétursson','','','9.5.2018'),('Arnór Pétursson','','','9.5.2018'),
 ('Kristófer Sigurgeirsson','','','9.5.2018'),('Kristófer Sigurgeirsson','','','9.5.2018'),('Kristófer Sigurgeirsson','','','9.5.2018'),('Kristófer Sigurgeirsson','','','9.5.2018'),('Kristófer Sigurgeirsson','','','9.5.2018');
