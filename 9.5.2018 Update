@@ -5,6 +5,7 @@ USE kennitala_Lokaverkefni;
 CREATE TABLE flytjandi
 (    ID INT(2) PRIMARY KEY NOT NULL,
     artist_name varchar(50),
+    label_name VARCHAR(50),
     born VARCHAR(30),
     died VARCHAR(30),
     biography TEXT
@@ -33,7 +34,7 @@ CREATE TABLE utgefandi
     label_name varchar(50),
     copyright varchar(25),
     located varchar(90),
-    FOREIGN KEY (label_name) REFERENCES lagalisti(song_name)
+    FOREIGN KEY (label_name) REFERENCES flytjandi(label_name)
 );
 
 INSERT INTO kennitala_Lokaverkefni.flytjandi(ID, artist_name, born, died, biography)
@@ -57,7 +58,7 @@ VALUES(75,'Pop','Post Malone'),
       (90,'Rock','Foo Fighters'),
       (95,'Metal','Sabaton');
 
-INSERT INTO kennitala_Lokaverkefni.uutgefandui(ID, lable_name, copyright, located)
+INSERT INTO kennitala_Lokaverkefni.utgefandui(ID, lable_name, copyright, located)
 VALUES('302','Xo','Yes','Canada'),
       ('390','Republic','Yes','Ameríka'),
       ('645','RCA','Yes','Ameríka'),
@@ -99,10 +100,10 @@ VALUES
 
 INSERT INTO lagaval(subscriber,band,song_name,date)
 VALUES
-('Jón Jónsson','Sabaton','Ghost Division',''),('Jón Jónsson','Foo Fighters','Learn To Fly',''),('Jón Jónsson','Sabaton','Resist And Bite',''),('Jón Jónsson','Sabaton','Hearts Of Iron',''),('Jón Jónsson','Foo Fighters','These Days',''),
+('Jón Jónsson','Sabaton','Ghost Division','9.5.2018'),('Jón Jónsson','Foo Fighters','Learn To Fly','9.5.2018'),('Jón Jónsson','Sabaton','Resist And Bite','9.5.2018'),('Jón Jónsson','Sabaton','Hearts Of Iron','9.5.2018'),('Jón Jónsson','Foo Fighters','These Days','9.5.2018'),
 ('Gunnar Gunnarsson','Logic','BoomTrap Protocol','9.5.2018'),('Gunnar Gunnarsson','The Weeknd','Call Out My Name','9.5.2018'),('Gunnar Gunnarsson','Sabaton','Ghost Division','9.5.2018'),('Gunnar Gunnarsson','Post Malone','rockstar','9.5.2018'),('Gunnar Gunnarsson','Foo Fighters','These Days','9.5.2018'),
 ('Páll Guðmundsson','Foo Fighters','Everlong','9.5.2018'),('Páll Guðmundsson','The Weeknd','Pray For Me','9.5.2018'),('Páll Guðmundsson','Logic','BoomTrap Protocol','9.5.2018'),('Páll Guðmundsson','Logic','Everyday','9.5.2018'),('Páll Guðmundsson','Logic','1-800-273-8255','9.5.2018'),
 ('Ari Jónsson','Sabaton','Hearts of Iron','9.5.2018'),('Ari Jónsson','Post Malone','White Iverson','9.5.2018'),('Ari Jónsson','Post Malone','Congratulations','9.5.2018'),('Ari Jónsson','The Weeknd','Sidewalks','9.5.2018'),('Ari Jónsson','Foo Fighters','Learn To Fly','9.5.2018'),
 ('Pétur Gunnarsson','Foo Figters','Learn To Fly','9.5.2018'),('Pétur Gunnarsson','Sabaton','Resist And Bite','9.5.2018'),('Pétur Gunnarsson','Logic','Everyday','9.5.2018'),('Pétur Gunnarsson','Logic','1-800-273-8255','9.5.2018'),('Pétur Gunnarsson','Post Malone','White Iverson','9.5.2018'),
-('Arnór Pétursson','','','9.5.2018'),('Arnór Pétursson','','','9.5.2018'),('Arnór Pétursson','','','9.5.2018'),('Arnór Pétursson','','','9.5.2018'),('Arnór Pétursson','','','9.5.2018'),
-('Kristófer Sigurgeirsson','','','9.5.2018'),('Kristófer Sigurgeirsson','','','9.5.2018'),('Kristófer Sigurgeirsson','','','9.5.2018'),('Kristófer Sigurgeirsson','','','9.5.2018'),('Kristófer Sigurgeirsson','','','9.5.2018');
+('Arnór Pétursson','Sabaton','Ghost Division','9.5.2018'),('Arnór Pétursson','Post Malone','rockstar','9.5.2018'),('Arnór Pétursson','Foo Fighters','These Days','9.5.2018'),('Arnór Pétursson','Sabaton','Hearts Of Iron ','9.5.2018'),('Arnór Pétursson','Foo Fighters','Everlong','9.5.2018'),
+('Kristófer Sigurgeirsson','Foo Fighters','Learn To Fly','9.5.2018'),('Kristófer Sigurgeirsson','Sabaton','Resist And Bite','9.5.2018'),('Kristófer Sigurgeirsson','Logic','Everyday','9.5.2018'),('Kristófer Sigurgeirsson','Logic','1-800-273-8255','9.5.2018'),('Kristófer Sigurgeirsson','Post Malone','Congratulations','9.5.2018');
