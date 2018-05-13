@@ -110,3 +110,34 @@ VALUES
 ('Pétur Gunnarsson','Foo Figters','Learn To Fly','9.5.2018'),('Pétur Gunnarsson','Sabaton','Resist And Bite','9.5.2018'),('Pétur Gunnarsson','Logic','Everyday','9.5.2018'),('Pétur Gunnarsson','Logic','1-800-273-8255','9.5.2018'),('Pétur Gunnarsson','Post Malone','White Iverson','9.5.2018'),
 ('Arnór Pétursson','Sabaton','Ghost Division','9.5.2018'),('Arnór Pétursson','Post Malone','rockstar','9.5.2018'),('Arnór Pétursson','Foo Fighters','These Days','9.5.2018'),('Arnór Pétursson','Sabaton','Hearts Of Iron ','9.5.2018'),('Arnór Pétursson','Foo Fighters','Everlong','9.5.2018'),
 ('Kristófer Sigurgeirsson','Foo Fighters','Learn To Fly','9.5.2018'),('Kristófer Sigurgeirsson','Sabaton','Resist And Bite','9.5.2018'),('Kristófer Sigurgeirsson','Logic','Everyday','9.5.2018'),('Kristófer Sigurgeirsson','Logic','1-800-273-8255','9.5.2018'),('Kristófer Sigurgeirsson','Post Malone','Congratulations','9.5.2018');
+/*-------------------------------------------------------------*/
+
+/*- Dæmi 14 -*/
+SELECT artist_name,count(song_name) FROM lagalisti GROUP BY artist_name;
+
+/*- Dæmi 13 -*/
+/* Þetta mun ekki virka því það er engin með 4 lög
+SELECT * FROM *
+*/
+
+/*- Dæmi 12 -*/
+SELECT AVG(LENGTH) FROM lagalisti;
+
+/*- Dæmi 11 -*/
+/* Þetta munn ekki virka því taflan er ekki tengd with útgefanda
+SELECT song_name, ??? AND release_date == '2015' FROM lagalisti;
+*/
+
+/*- Dæmi 10 -*/
+SELECT song_name WITH 'A','s' FROM lagalisti;
+
+/*- Dæmi 9 -*/
+SELECT subscriber,count(subscriber) FROM lagaval GROUP BY subscriber;
+
+/*- Dæmi 8 -*/
+/* þetta dæmi virkar ekki með töflum
+SELECT * FROM *
+*/
+
+/*- Dæmi 7 -*/
+SELECT artist_name,song_name AND TOP 5 length  FROM lagalisti
