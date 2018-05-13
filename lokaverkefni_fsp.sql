@@ -1,6 +1,3 @@
-/*
-Sýnið heiti allra flytjanda og fjölda laga sem hver og einn á
-*/
 
 /*
 SELECT song_name, label_name 
